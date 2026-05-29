@@ -56,7 +56,7 @@ const TOPICS = [
 
 // Modern custom X/Twitter logo component
 const TwitterIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="68" height="48">
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
@@ -381,7 +381,7 @@ ${code}
   return (
     <div className="flex-1 w-full bg-slate-950 text-slate-100 flex flex-col font-sans select-none overflow-x-hidden relative">
       {/* Sleek background decoration */}
-      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[50%] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
 
       {/* Main Container */}
@@ -389,12 +389,12 @@ ${code}
         {/* Header */}
         <header className="flex flex-col md:flex-row items-center justify-between border-b border-slate-800 pb-6 mb-8 gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-tr from-indigo-600 to-indigo-400 rounded-xl shadow-lg shadow-indigo-600/20">
+            <div className="p-2.5 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-xl shadow-lg shadow-blue-600/20">
               <ScrollText className="w-7 h-7 text-white" />
             </div>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent flex items-center gap-2">
-                LeetLog <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-950 border border-indigo-800 text-indigo-400 font-semibold uppercase tracking-wider">v1.0</span>
+                LeetLog <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-950 border border-blue-800 text-blue-400 font-semibold uppercase tracking-wider">v1.0</span>
               </h1>
               <p className="text-sm text-slate-400">Developer Markdown Notes & Automated Twitter/X Threader</p>
             </div>
@@ -415,7 +415,7 @@ ${code}
 
               {/* Active connecting progress line */}
               <div
-                className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-indigo-600 to-indigo-500 transition-all duration-500 ease-in-out"
+                className="absolute left-0 top-0 bottom-0 bg-blue-600 transition-all duration-500 ease-in-out"
                 style={{
                   width: step === 1 ? "0%" : step === 2 ? "50%" : "100%"
                 }}
@@ -435,20 +435,20 @@ ${code}
                     initial={false}
                     animate={{
                       scale: current ? 1.15 : 1,
-                      backgroundColor: current ? "#4f46e5" : active ? "#312e81" : "#0f172a",
-                      borderColor: current ? "#818cf8" : active ? "#4f46e5" : "#334155"
+                      backgroundColor: current ? "#155DFC" : active ? "#1e3a8a" : "#0f172a",
+                      borderColor: current ? "#60a5fa" : active ? "#155DFC" : "#334155"
                     }}
                     className={`w-9 h-9 rounded-full flex items-center justify-center border font-bold text-sm shadow-md transition-colors duration-300`}
                   >
                     {active && s.num < step ? (
                       <Check className="w-4 h-4 text-white" />
                     ) : (
-                      <span className={current ? "text-white" : active ? "text-indigo-200" : "text-slate-500"}>
+                      <span className={current ? "text-white" : active ? "text-blue-200" : "text-slate-500"}>
                         {s.num}
                       </span>
                     )}
                   </motion.div>
-                  <span className={`text-xs mt-2 font-semibold tracking-wide ${current ? "text-indigo-400 font-bold" : active ? "text-slate-300" : "text-slate-500"}`}>
+                  <span className={`text-xs mt-2 font-semibold tracking-wide ${current ? "text-blue-400 font-bold" : active ? "text-slate-300" : "text-slate-500"}`}>
                     {s.label}
                   </span>
                 </div>
@@ -481,7 +481,7 @@ ${code}
                       {/* Name */}
                       <div className="flex flex-col gap-1.5">
                         <label htmlFor="problem-name" className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                          Problem Name <span className="text-indigo-400">*</span>
+                          Problem Name <span className="text-blue-400">*</span>
                         </label>
                         <input
                           id="problem-name"
@@ -490,14 +490,14 @@ ${code}
                           value={problemName}
                           onChange={(e) => setProblemName(e.target.value)}
                           placeholder="e.g. Permutation in String"
-                          className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                          className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
                         />
                       </div>
 
                       {/* URL */}
                       <div className="flex flex-col gap-1.5">
                         <label htmlFor="problem-url" className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                          Problem URL <span className="text-indigo-400">*</span>
+                          Problem URL <span className="text-blue-400">*</span>
                         </label>
                         <input
                           id="problem-url"
@@ -506,7 +506,7 @@ ${code}
                           value={problemUrl}
                           onChange={(e) => setProblemUrl(e.target.value)}
                           placeholder="e.g. https://leetcode.com/problems/permutation-in-string/"
-                          className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                          className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
                         />
                       </div>
 
@@ -520,7 +520,7 @@ ${code}
                             id="language"
                             value={language}
                             onChange={(e) => setLanguage(e.target.value)}
-                            className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm text-slate-100 outline-none transition-all appearance-none cursor-pointer"
+                            className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm text-slate-100 outline-none transition-all appearance-none cursor-pointer"
                           >
                             {LANGUAGES.map((lang) => (
                               <option key={lang} value={lang}>{lang}</option>
@@ -537,7 +537,7 @@ ${code}
                             id="topic"
                             value={topic}
                             onChange={(e) => setTopic(e.target.value)}
-                            className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm text-slate-100 outline-none transition-all appearance-none cursor-pointer"
+                            className="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm text-slate-100 outline-none transition-all appearance-none cursor-pointer"
                           >
                             {TOPICS.map((top) => (
                               <option key={top.value} value={top.value}>{top.label}</option>
@@ -555,14 +555,14 @@ ${code}
                       </h3>
 
                       {!screenshotPreview ? (
-                        <div className="border-2 border-dashed border-slate-800 hover:border-indigo-500/50 rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer transition-colors relative group">
+                        <div className="border-2 border-dashed border-slate-800 hover:border-blue-500/50 rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer transition-colors relative group">
                           <input
                             type="file"
                             accept="image/*"
                             onChange={handleScreenshotChange}
                             className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
                           />
-                          <UploadCloud className="w-8 h-8 text-slate-500 group-hover:text-indigo-400 transition-colors mb-2" />
+                          <UploadCloud className="w-8 h-8 text-slate-500 group-hover:text-blue-400 transition-colors mb-2" />
                           <p className="text-xs font-medium text-slate-300">Click or drag image file here</p>
                           <p className="text-[10px] text-slate-500 mt-1">PNG, JPG, or WEBP. Max 5MB</p>
                         </div>
@@ -595,10 +595,10 @@ ${code}
                     <div className="flex-1 p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md shadow-xl flex flex-col gap-4 min-h-[350px] lg:min-h-0">
                       <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                         <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                          <Code className="w-5 h-5 text-indigo-400" />
+                          <Code className="w-5 h-5 text-blue-400" />
                           Solution Code
                         </h2>
-                        <span className="text-[10px] font-mono px-2 py-1 rounded bg-indigo-950 text-indigo-400 border border-indigo-900">
+                        <span className="text-[10px] font-mono px-2 py-1 rounded bg-blue-950 text-blue-400 border border-blue-900">
                           {language}
                         </span>
                       </div>
@@ -610,7 +610,7 @@ ${code}
                           value={code}
                           onChange={(e) => setCode(e.target.value)}
                           placeholder="// Paste your correct solution code here..."
-                          className="flex-1 w-full p-4 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-indigo-200 placeholder-slate-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none resize-none transition-all"
+                          className="flex-1 w-full p-4 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-blue-200 placeholder-slate-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none transition-all"
                         />
                       </div>
                     </div>
@@ -629,7 +629,7 @@ ${code}
                     <button
                       type="submit"
                       disabled={isGenerating}
-                      className="w-full py-3.5 cursor-pointer rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold tracking-wide transition-all shadow-xl shadow-indigo-600/20 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
+                      className="w-full py-3.5 cursor-pointer rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold tracking-wide transition-all shadow-xl shadow-blue-600/20 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
                     >
                       {isGenerating ? (
                         <>
@@ -674,7 +674,7 @@ ${code}
                       <textarea
                         value={rawMarkdown}
                         onChange={(e) => setRawMarkdown(e.target.value)}
-                        className="flex-1 w-full p-4 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300 outline-none resize-none focus:border-indigo-500 transition-all"
+                        className="flex-1 w-full p-4 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300 outline-none resize-none focus:border-blue-500 transition-all"
                       />
                     </div>
                   </div>
@@ -684,10 +684,10 @@ ${code}
                     <div className="flex-1 p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md shadow-xl flex flex-col gap-4">
                       <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                         <h2 className="text-sm font-bold text-white flex items-center gap-2">
-                          <Radio className="w-4.5 h-4.5 text-indigo-400" />
+                          <Radio className="w-4.5 h-4.5 text-blue-400" />
                           Live Markdown Render
                         </h2>
-                        <span className="text-[10px] px-2 py-0.5 rounded bg-slate-850 text-indigo-300 font-mono">
+                        <span className="text-[10px] px-2 py-0.5 rounded bg-slate-850 text-blue-300 font-mono">
                           Parsed HTML
                         </span>
                       </div>
@@ -715,7 +715,7 @@ ${code}
 
                   <button
                     onClick={handleProceedToShip}
-                    className="px-7 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold tracking-wide transition-all shadow-xl shadow-indigo-600/10 flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
+                    className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold tracking-wide transition-all shadow-xl shadow-blue-600/10 flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
                   >
                     Proceed to Ship
                     <ChevronRight className="w-4 h-4" />
@@ -746,14 +746,14 @@ ${code}
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="mt-4 flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-950 border border-slate-850/60"
+                        className="mt-4 flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-950 border border-slate-800/60"
                       >
                         <TwitterIcon className="w-4.5 h-4.5 text-sky-400 shrink-0" />
                         <span className="text-xs font-semibold text-slate-300 select-none">Post to Twitter/X thread automatically</span>
                         <button
                           type="button"
                           onClick={() => setAutoPostTwitter(!autoPostTwitter)}
-                          className={`relative inline-flex h-5 w-10 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-255 ease-in-out outline-none ${autoPostTwitter ? "bg-indigo-600" : "bg-slate-800"}`}
+                          className={`relative inline-flex h-5 w-10 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-255 ease-in-out outline-none ${autoPostTwitter ? "bg-blue-600" : "bg-slate-800"}`}
                         >
                           <span
                             className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${autoPostTwitter ? "translate-x-5" : "translate-x-0"}`}
@@ -767,13 +767,13 @@ ${code}
                     {/* GitHub Ship Card */}
                     <div className="p-5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
-                        <div className={`p-2 rounded-lg ${githubStatus === "success" ? "bg-emerald-950/50 border border-emerald-900 text-emerald-400" : "bg-slate-900 border border-slate-850 text-indigo-400"}`}>
+                        <div className={`p-2 rounded-lg ${githubStatus === "success" ? "bg-emerald-950/50 border border-emerald-900 text-emerald-400" : "bg-slate-900 border border-slate-850 text-blue-400"}`}>
                           <GitCommit className="w-5 h-5" />
                         </div>
                         <div>
                           <p className="text-sm font-bold text-slate-100">Commit to GitHub Repository</p>
                           <p className="text-[11px] text-slate-400 mt-0.5">
-                            Target path: <code className="font-mono text-indigo-300">{topic}/{problemName.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.md</code>
+                            Target path: <code className="font-mono text-blue-300">{topic}/{problemName.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.md</code>
                           </p>
                           {githubError && (
                             <p className="text-[11px] text-red-400 mt-1 font-medium">{githubError}</p>
@@ -785,7 +785,7 @@ ${code}
                           <span className="text-xs px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-500 font-semibold uppercase">Pending</span>
                         )}
                         {githubStatus === "loading" && (
-                          <Loader2 className="w-5 h-5 text-indigo-400 animate-spin" />
+                          <Loader2 className="w-5 h-5 text-blue-400 animate-spin" />
                         )}
                         {githubStatus === "success" && (
                           <div className="flex items-center gap-2">
@@ -828,7 +828,7 @@ ${code}
                             <span className="text-xs px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-500 font-semibold uppercase">Pending</span>
                           )}
                           {twitterStatus === "loading" && (
-                            <Loader2 className="w-5 h-5 text-indigo-400 animate-spin" />
+                            <Loader2 className="w-5 h-5 text-blue-400 animate-spin" />
                           )}
                           {twitterStatus === "success" && (
                             <div className="flex items-center gap-2">
@@ -871,13 +871,13 @@ ${code}
                               min="1"
                               value={dayNumber}
                               onChange={(e) => setDayNumber(e.target.value)}
-                              className="w-10 text-center bg-slate-950 border border-slate-800 rounded font-bold text-[10px] text-indigo-400 outline-none focus:border-indigo-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none py-0.5"
+                              className="w-10 text-center bg-slate-950 border border-slate-800 rounded font-bold text-[10px] text-blue-400 outline-none focus:border-blue-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none py-0.5"
                             />
                           </div>
                         </div>
 
                         <div className="relative">
-                          <pre className="w-full p-4 rounded-lg bg-slate-900/60 border border-slate-850 font-mono text-xs text-indigo-200/90 leading-relaxed max-h-[140px] overflow-y-auto whitespace-pre-wrap">
+                          <pre className="w-full p-4 rounded-lg bg-slate-900/60 border border-slate-850 font-mono text-xs text-blue-200/90 leading-relaxed max-h-[140px] overflow-y-auto whitespace-pre-wrap">
                             {`day ${dayNumber}`}
                             {"\n\n"}
                             {problemName.toLowerCase()}
@@ -887,7 +887,7 @@ ${code}
 
                           <button
                             onClick={handleCopyToClipboard}
-                            className="absolute top-2.5 right-2.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-slate-950 hover:bg-indigo-650 text-indigo-300 hover:text-white border border-slate-800 hover:border-indigo-500 shadow-md transition-all flex items-center gap-1.5 active:scale-95 cursor-pointer"
+                            className="absolute top-2.5 right-2.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-slate-950 hover:bg-blue-600 text-blue-300 hover:text-white border border-slate-800 hover:border-blue-500 shadow-md transition-all flex items-center gap-1.5 active:scale-95 cursor-pointer"
                           >
                             {copied ? (
                               <>
@@ -902,6 +902,17 @@ ${code}
                             )}
                           </button>
                         </div>
+
+                        {/* Direct Link to X Profile */}
+                        <a
+                          href="https://x.com/ogfego"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full py-2.5 px-4 rounded-lg bg-slate-950 hover:bg-slate-900 text-slate-300 hover:text-white border border-slate-800/60 hover:border-slate-800 font-semibold text-xs transition-all shadow flex items-center justify-center gap-2 mt-2 hover:scale-[1.005] active:scale-[0.995]"
+                        >
+                          <TwitterIcon className="w-4 h-4 text-sky-400" />
+                          Go to my X profile
+                        </a>
                       </motion.div>
                     )}
 
@@ -909,7 +920,7 @@ ${code}
                     {shipLogs.length > 0 && (
                       <div className="flex flex-col gap-2">
                         <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Console Logs</span>
-                        <div className="w-full p-4 rounded-lg bg-slate-950 border border-slate-850 font-mono text-[10px] text-indigo-300/80 leading-relaxed overflow-y-auto max-h-[120px] shadow-inner">
+                        <div className="w-full p-4 rounded-lg bg-slate-950 border border-slate-850 font-mono text-[10px] text-blue-300/80 leading-relaxed overflow-y-auto max-h-[120px] shadow-inner">
                           {shipLogs.map((log, index) => (
                             <div key={index} className="truncate">
                               {log}
@@ -934,7 +945,7 @@ ${code}
                       <button
                         onClick={handleShipIt}
                         disabled={isShipping}
-                        className="w-full py-4 cursor-pointer rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-black tracking-wider transition-all shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
+                        className="w-full py-4 cursor-pointer rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-black tracking-wider transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
                       >
                         {isShipping ? (
                           <>

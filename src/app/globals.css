@@ -60,13 +60,13 @@ body {
 }
 
 .prose-custom a {
-  color: #818cf8;
+  color: #60a5fa;
   text-decoration: underline;
   font-weight: 500;
 }
 
 .prose-custom a:hover {
-  color: #a5b4fc;
+  color: #93c5fd;
 }
 
 .prose-custom ul {

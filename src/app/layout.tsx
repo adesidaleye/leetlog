@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "LeetLog - LeetCode Developer Diary & X Threader",
   description: "Generate beautiful developer diaries from your LeetCode solutions, commit them to GitHub, and auto-append them to your X/Twitter thread.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "favicon.ico",
   },
 };
 

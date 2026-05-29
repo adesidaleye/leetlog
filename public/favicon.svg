@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
   <defs>
-    <linearGradient id="indigo-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="100%" stop-color="#818cf8" />
+    <linearGradient id="blue-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#60a5fa" />
     </linearGradient>
   </defs>
   
-  <!-- Indigo gradient rounded square background -->
-  <rect x="26" y="26" width="460" height="460" rx="105" ry="105" fill="url(#indigo-grad)" />
+  <!-- Blue gradient rounded square background -->
+  <rect x="26" y="26" width="460" height="460" rx="105" ry="105" fill="url(#blue-grad)" />
   
-  <!-- Centered ScrollText icon from Lucidescaled up -->
+  <!-- Centered ScrollText icon from Lucide scaled up -->
   <g transform="translate(128, 128) scale(10.666)" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M8 21h12a2 2 0 0 0 2-2v-2H10v2a2 2 0 0 0 2 2Z" />
     <path d="M19 17V5a2 2 0 0 0-2-2H4" />
