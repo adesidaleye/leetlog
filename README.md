@@ -119,6 +119,7 @@ Deploy your solution directly to GitHub and share:
    * (If auto-post is disabled/unconfigured) Present a **manual Copy Post card** where you can adjust your streak day count inline and copy the formatted lowercase post text to your clipboard.
 
 ![Step 3: Ship & Share Solution](public/screenshots/step3-ship.png)
+![Step 4: Shipped Solution](public/screenshots/step4-shipped.png)
 
 ---
 
